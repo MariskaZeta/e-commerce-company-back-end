@@ -1,14 +1,14 @@
 const router = require('express').Router();
 const { Category, Product } = require('../../models');
 
-// this route is to GET all categories
+// this route will GET all categories
 router.get("/", (req, res) => {
   Category.findAll({ include: [Product] })
   .then((data) => res.json(data))
   .catch((error) => res.json(error));
 });
 
-// this route is to GET a category by id
+// this route is to GET a category by its `id` value
 router.get("/:id", (req, res) => {
   Category.findOne(req.params.id, { include: [Product] })
   .then((data) => res.json(data))
