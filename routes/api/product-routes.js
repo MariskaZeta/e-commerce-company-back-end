@@ -89,7 +89,7 @@ router.put("/:id", (req, res) => {
 router.delete("/:id", (req, res) => {
   Product.destroy({
     where: {
-      id: req.params.id.
+      id: req.params.id,
     },
   })
   .then((data) => res.json(data))

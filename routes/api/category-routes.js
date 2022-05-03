@@ -10,7 +10,7 @@ router.get("/", (req, res) => {
 
 // this route is to GET a category by its `id` value
 router.get("/:id", (req, res) => {
-  Category.findOne(req.params.id, { include: [Product] })
+  Category.findByPk(req.params.id, { include: [Product] })
   .then((data) => res.json(data))
   .catch((error) => res.json(error));
 });
