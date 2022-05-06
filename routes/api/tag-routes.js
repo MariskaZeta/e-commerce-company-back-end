@@ -16,8 +16,14 @@ router.get("/", (req, res) => {
 
 // this route will GET a tag by its `id` value
 router.get("/:id", (req, res) => {
-  Tag.findOne(req.params.id, {
-      include: [Product]
+  Tag.findOne({
+      where: {
+        id: req.params.id
+      },
+      include: [{
+        model: Product,
+        through: ProductTag,
+      }],
     })
     .then((data) => res.json(data))
     .catch((error) => res.json(error));
@@ -35,8 +41,7 @@ router.put("/:id", (req, res) => {
   Tag.update({
       id: req.body.id,
       tag_name: req.body.tag_name,
-    },
-    {
+    }, {
       where: {
         id: req.params.id,
       },
@@ -48,12 +53,12 @@ router.put("/:id", (req, res) => {
 // this route will DELETE a single tag by its `id` value
 router.delete("/:id", (req, res) => {
   Tag.destroy({
-    where: {
-      id: req.params.id
-    },
-  })
-  .then((data) => res.json(data))
-  .catch((error) => res.json(error));
+      where: {
+        id: req.params.id
+      },
+    })
+    .then((data) => res.json(data))
+    .catch((error) => res.json(error));
 });
 
 module.exports = router;
