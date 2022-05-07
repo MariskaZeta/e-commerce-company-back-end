@@ -14,12 +14,12 @@ This application is the back-end of an e-commerce site. Using an Express.js API 
 - [Screenshots](#screenshots)
 
 ## Github
-Here is the link to the GitHub URL:
+Here is the link to the GitHub URL: https://github.com/MariskaZeta/e-commerce-company-back-end
 
-Here is the link to clone for the GitHub repository:
+Here is the link to clone for the GitHub repository: https://github.com/MariskaZeta/e-commerce-company-back-end.git
 
 # Video
-Here is the link to the video demonstration:
+Here is the link to the video demonstration: https://drive.google.com/file/d/1VuEBTIW9YI6eO5fLyEkz3VsbNiKTYd40/view
 
 ## Installation
 The user should git clone the repository from GitHub. This application requires Node.js, Express, MySQL2, and Sequelize. Make sure to install those dependencies at the root directory of the repository. To view the database from MySQL run `mysql -u root -p`. Login with your password. Run `source db/schema.sql` to use the schema. Enter `quit` to exit the MySQL shell. Then you will run the command `npm run seed` in your terminal to seed the database. To begin the application run `node server.js` or `npm start`.
