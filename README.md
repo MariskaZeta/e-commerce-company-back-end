@@ -52,5 +52,9 @@ The user should git clone the repository from GitHub. This application requires 
 
 ## Screenshots
 
+<img width="1728" alt="e-commerce-company-back-end" src="https://user-images.githubusercontent.com/102756451/167273501-7f07d69b-ee96-4ea4-aa9e-f248b4be28bc.png">
+<hr>
+<img width="1721" alt="e-commerce-company-back-end-screenshot" src="https://user-images.githubusercontent.com/102756451/167273505-1d3f7619-9ae6-409e-bc10-3e0a8f209ef7.png">
+
 ## Author
 Madison Kendall
